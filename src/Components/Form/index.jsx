@@ -1,14 +1,21 @@
-// import React from "react";
+import {useState} from "react";
 import "./Form.scss";
+import '../../App'
 
 const Form = (props) => {
-  function handleSubmit() {
-    preventDefault();
-    const formData = {
-      method: "GET",
-      url: "https://pokeapi.co/api/v2/pokemon",
-    };
+  const {appState, setAppState} = props;
+  const [formData, setFormData] = useState ({
+    method: 'GET',
+    url:'https://pokeapi.co/api/v2/pokemon',
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
     props.handleApiCall(formData);
+  }
+    const handleOnFormChange =(e) => {
+      method: "GET",
+      props.handleApiCall(formData);
+    };
   }
   return (
     <>
@@ -24,6 +31,11 @@ const Form = (props) => {
           <span id="put">PUT</span>
           <span id="delete">DELETE</span>
         </label>
+        {
+          (formData.method === 'post'|| FormDataEvent.method === 'put') && <h1>change this to a text area</h1>
+          // make this a html text area. make state to be value of the txt area ('body')?
+          // create onChangeHandler for the text are that updates this.state.can copy setState for form data. Change body instead of dformData, body may be string or object
+        }
       </form>
     </>
   );
