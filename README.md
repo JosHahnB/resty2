@@ -7,7 +7,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Functional requirements
+## Functional requirements lab 27
 
 Extend your React Application so that your functional components are able to manage their own state variables using the `useState()` Hook.
 NOTE: It is not a requirement to make the actual API call. That can be mocked with “fake” data.
@@ -34,3 +34,11 @@ Toggle the “loading” status before and after the request.
 `<Results />`
 Conditionally renders “Loading” or the data depending on the status of the request.
 Renders the data as “pretty” JSON.
+
+## Functional Requirements Lab 28
+
+Extend your application to include the ability to send http requests and display response data, when the `<Form />` component experiences a submission event.
+
+Refactor application methods to allow for browser side HTTP requests to be sent.
+Your implementation should allow the user to set a url, method, and request body.
+Make sure all relevant request and response data is displayed to the User.
