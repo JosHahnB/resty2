@@ -80,11 +80,7 @@ const Form = (props) => {
             name="body"
           />
         )}
-        {/* {(formData.method === "POST" || formData.method === "PUT") && (
-          <textarea />
-        )} */}
-        {/* {myArray.length && {"BAD"}}
-        {myArray.length > 0 && {"GOOD"}} */}
+
       </form>
     </>
   );
