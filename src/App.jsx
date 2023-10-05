@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.scss';
+import Chance from 'chance';
 
 
 // Let's talk about using index.js and some other name in the component folder.
@@ -12,17 +13,40 @@ import Footer from './Components/Footer';
 import Form from './Components/Form';
 import Results from './Components/Results';
 
+function reducerFunction(state, action) {
+  return [...state, action.payload]
+payload = {
+  url: Chance.url,
+  method: "get",
+  data: {}
+}
+
+switch (action.type) {
+  case "GET":
+    return {
+      ...state,
+      method: "get",
+      data: {}
+    };
+}
+
+}
+
+const History = () => {
+  const [appState, dispatch] = useReducer(reduceFunction, initialValue);
+
+  const handleNewApi = () => {
+    const 
+  }
+
+}
 const App = () => {
   const [appState, setAppState] = useState({
         data: {},
         requestParams: {},
       });
 
-      const History = () => {
-        const [appState, dispatch] = useReducer(reduceFunction, initialValue)
-
-        
-      }
+     
 
 
       useEffect(() => {
