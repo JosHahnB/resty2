@@ -1,6 +1,6 @@
 // import React from 'react'
 
-const index = (props) => {
+const Results = (props) => {
   return (
     <section>
       <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : null}</pre>
@@ -8,4 +8,4 @@ const index = (props) => {
   );
 };
 
-export default index;
+export default Results;

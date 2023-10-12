@@ -1,11 +1,11 @@
-import { useState } from "react";
-import "./Form.scss";
+import { useState } from 'react';
+import './Form.scss';
 
 const Form = (props) => {
   const [formData, setFormData] = useState({
-    method: "GET",
-    url: "",
-    body: "",
+    method: 'GET',
+    url: '',
+    body: '',
   });
 
   const handleSubmit = (e) => {
@@ -34,7 +34,14 @@ const Form = (props) => {
             value={formData.url}
             onChange={handleFormInput}
           />
-          <button data-testid="goButton" style={{ color: "red" }} type="submit">
+          <button
+            data-testid="goButton"
+            style={{ color: 'red' }}
+            type="submit"
+            onClick={() => {
+              handleButtonClick;
+            }}
+          >
             GO!
           </button>
         </label>
@@ -47,6 +54,7 @@ const Form = (props) => {
           >
             GET
           </button>
+
           <button
             className="method"
             id="post"
@@ -55,6 +63,7 @@ const Form = (props) => {
           >
             POST
           </button>
+
           <button
             className="method"
             id="put"
@@ -63,6 +72,7 @@ const Form = (props) => {
           >
             PUT
           </button>
+
           <button
             className="method"
             id="delete"
@@ -72,7 +82,7 @@ const Form = (props) => {
             DELETE
           </button>
         </label>
-        {["PUT", "POST"].includes(formData.method) && (
+        {['PUT', 'POST'].includes(formData.method) && (
           <textarea
             value={formData.body}
             rows={10}
@@ -80,7 +90,6 @@ const Form = (props) => {
             name="body"
           />
         )}
-
       </form>
     </>
   );
